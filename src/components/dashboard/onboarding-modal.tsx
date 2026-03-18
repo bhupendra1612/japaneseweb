@@ -71,7 +71,7 @@ export function OnboardingModal() {
           </button>
           <div className="relative">
             <p className="text-4xl mb-2">🎌</p>
-            <h2 className="text-xl font-bold">Welcome to EasyJapanese!</h2>
+            <h2 className="text-xl font-bold">Welcome to JapanGoLearn!</h2>
             <p className="text-sm text-white/80 mt-1">Let&apos;s set up your profile</p>
           </div>
         </div>

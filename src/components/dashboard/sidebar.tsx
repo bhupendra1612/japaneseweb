@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
@@ -46,16 +47,23 @@ export function DashboardSidebar({ collapsed, onToggle }: DashboardSidebarProps)
       {/* Logo */}
       <div className="h-16 flex items-center px-4 border-b border-gray-200 dark:border-gray-800 shrink-0">
         <div className="flex items-center gap-3 overflow-hidden">
-          <div className="shrink-0 flex items-center justify-center w-9 h-9 rounded-xl gradient-bg-primary text-white">
-            <BookOpen className="w-5 h-5" />
-          </div>
-          <span
-            className={`text-base font-bold gradient-text whitespace-nowrap transition-all duration-200 ${
-              collapsed ? "opacity-0 w-0" : "opacity-100 w-auto"
-            }`}
-          >
-            EasyJapanese
-          </span>
+          {collapsed ? (
+            <Image
+              src="/icon-192x192.png"
+              alt="JapanGoLearn"
+              width={32}
+              height={32}
+              className="rounded-xl shrink-0"
+            />
+          ) : (
+            <Image
+              src="/japangolearn_logo.webp"
+              alt="JapanGoLearn Logo"
+              width={130}
+              height={36}
+              className="h-9 w-auto object-contain"
+            />
+          )}
         </div>
       </div>
 

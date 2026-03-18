@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
-  description: "Disclaimer for EasyJapanese educational platform.",
+  description: "Disclaimer for JapanGoLearn educational platform.",
+  alternates: {
+    canonical: "https://japangolearn.com/disclaimer",
+  },
 };
 
 export default function DisclaimerPage() {
@@ -18,7 +21,7 @@ export default function DisclaimerPage() {
 
           <h2 className="text-xl font-semibold mt-8">Educational Purpose</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            EasyJapanese is designed as a supplementary Japanese language learning tool.
+            JapanGoLearn is designed as a supplementary Japanese language learning tool.
             While we strive for accuracy in all content, we do not guarantee that our materials
             are free from errors. Users are encouraged to verify important information with
             official sources.
@@ -27,7 +30,7 @@ export default function DisclaimerPage() {
           <h2 className="text-xl font-semibold mt-8">JLPT Preparation</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             Our JLPT preparation paths are designed based on publicly available exam guidelines.
-            EasyJapanese is not affiliated with or endorsed by the Japan Foundation or JEES
+            JapanGoLearn is not affiliated with or endorsed by the Japan Foundation or JEES
             (Japan Educational Exchanges and Services). Passing the JLPT exam depends on
             individual effort and preparation.
           </p>
@@ -41,7 +44,7 @@ export default function DisclaimerPage() {
 
           <h2 className="text-xl font-semibold mt-8">No Professional Advice</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            The content provided on EasyJapanese does not constitute professional language
+            The content provided on JapanGoLearn does not constitute professional language
             instruction or certification. For official certifications, please consult accredited
             institutions.
           </p>
@@ -49,8 +52,8 @@ export default function DisclaimerPage() {
           <h2 className="text-xl font-semibold mt-8">Contact</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             If you find any errors or have concerns about our content, please contact us at{" "}
-            <a href="mailto:support@digitalrise24.com" className="text-primary-600 dark:text-primary-400 hover:underline">
-              support@digitalrise24.com
+            <a href="mailto:support@japangolearn.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+              support@japangolearn.com
             </a>.
           </p>
         </div>

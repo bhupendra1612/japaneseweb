@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { X, BookOpen, LayoutDashboard, Route, BarChart3, Trophy, Bot, User } from "lucide-react";
 
@@ -40,10 +41,13 @@ export function MobileSidebar({ open, onClose }: MobileSidebarProps) {
         {/* Header */}
         <div className="h-16 flex items-center justify-between px-4 border-b border-gray-200 dark:border-gray-800 shrink-0">
           <Link href="/dashboard" onClick={onClose} className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl gradient-bg-primary text-white flex items-center justify-center">
-              <BookOpen className="w-4 h-4" />
-            </div>
-            <span className="text-base font-bold gradient-text">EasyJapanese</span>
+            <Image
+              src="/japangolearn_logo.webp"
+              alt="JapanGoLearn Logo"
+              width={120}
+              height={34}
+              className="h-8 w-auto object-contain"
+            />
           </Link>
           <button
             onClick={onClose}

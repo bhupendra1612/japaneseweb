@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "EasyJapanese",
-    short_name: "EasyJapanese",
+    name: "JapanGoLearn",
+    short_name: "JapanGoLearn",
     description: "Learn Japanese the Modern Way with Visual Kanji & Gamification",
     start_url: "/",
     display: "standalone",

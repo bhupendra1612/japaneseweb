@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Tips, guides, and insights for learning Japanese — from kanji mnemonics to JLPT prep strategies.",
+  alternates: {
+    canonical: "https://japangolearn.com/blog",
+  },
 };
 
 const placeholderPosts = [

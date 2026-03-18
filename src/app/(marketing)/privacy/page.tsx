@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for EasyJapanese platform by Digital Rise 24.",
+  description: "Privacy policy for JapanGoLearn platform by JapanGoLearn.",
+  alternates: {
+    canonical: "https://japangolearn.com/privacy",
+  },
 };
 
 export default function PrivacyPage() {
@@ -27,7 +30,7 @@ export default function PrivacyPage() {
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             We use your information to provide and improve the Platform, personalize your learning
             experience, send important notifications about your account, and analyze usage patterns
-            to make EasyJapanese better.
+            to make JapanGoLearn better.
           </p>
 
           <h2 className="text-xl font-semibold mt-8">3. Data Storage</h2>
@@ -57,8 +60,8 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-semibold mt-8">7. Contact</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             For privacy-related inquiries, contact us at{" "}
-            <a href="mailto:support@digitalrise24.com" className="text-primary-600 dark:text-primary-400 hover:underline">
-              support@digitalrise24.com
+            <a href="mailto:support@japangolearn.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+              support@japangolearn.com
             </a>.
           </p>
         </div>

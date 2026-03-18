@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "Terms and conditions for using EasyJapanese platform.",
+  description: "Terms and conditions for using JapanGoLearn platform.",
+  alternates: {
+    canonical: "https://japangolearn.com/terms",
+  },
 };
 
 export default function TermsPage() {
@@ -20,13 +23,13 @@ export default function TermsPage() {
 
           <h2 className="text-xl font-semibold mt-8">1. Acceptance of Terms</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            By accessing or using EasyJapanese (&quot;the Platform&quot;), operated by Digital Rise 24,
+            By accessing or using JapanGoLearn (&quot;the Platform&quot;), operated by JapanGoLearn,
             you agree to be bound by these Terms & Conditions. If you do not agree, please do not use the Platform.
           </p>
 
           <h2 className="text-xl font-semibold mt-8">2. Description of Service</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            EasyJapanese provides a Japanese language learning platform featuring visual learning tools,
+            JapanGoLearn provides a Japanese language learning platform featuring visual learning tools,
             gamified exercises, AI-powered conversation practice, and structured JLPT preparation paths.
           </p>
 
@@ -46,13 +49,13 @@ export default function TermsPage() {
 
           <h2 className="text-xl font-semibold mt-8">5. Intellectual Property</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            All content on EasyJapanese, including but not limited to text, graphics, logos, animations,
-            and software, is the property of Digital Rise 24 and is protected by intellectual property laws.
+            All content on JapanGoLearn, including but not limited to text, graphics, logos, animations,
+            and software, is the property of JapanGoLearn and is protected by intellectual property laws.
           </p>
 
           <h2 className="text-xl font-semibold mt-8">6. Limitation of Liability</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            EasyJapanese is provided &quot;as is&quot; without warranties of any kind. Digital Rise 24
+            JapanGoLearn is provided &quot;as is&quot; without warranties of any kind. JapanGoLearn
             shall not be liable for any indirect, incidental, or consequential damages arising from your
             use of the Platform.
           </p>
@@ -66,8 +69,8 @@ export default function TermsPage() {
           <h2 className="text-xl font-semibold mt-8">8. Contact</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             For questions about these Terms, contact us at{" "}
-            <a href="mailto:support@digitalrise24.com" className="text-primary-600 dark:text-primary-400 hover:underline">
-              support@digitalrise24.com
+            <a href="mailto:support@japangolearn.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+              support@japangolearn.com
             </a>.
           </p>
         </div>

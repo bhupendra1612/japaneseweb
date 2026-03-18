@@ -43,7 +43,7 @@ function timeAgo(isoDate: string): string {
 
 // Placeholder activities when user has no activity yet
 const PLACEHOLDER: ActivityEntry[] = [
-  { id: "p1", type: "achievement", title: "Welcome to EasyJapanese! 🎉", description: "Your journey begins today", xp_earned: 10, created_at: new Date().toISOString() },
+  { id: "p1", type: "achievement", title: "Welcome to JapanGoLearn! 🎉", description: "Your journey begins today", xp_earned: 10, created_at: new Date().toISOString() },
 ];
 
 export function RecentActivity({ activities }: RecentActivityProps) {

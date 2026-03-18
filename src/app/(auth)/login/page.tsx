@@ -46,7 +46,7 @@ export default function LoginPage() {
             <div className="flex items-center justify-center w-12 h-12 rounded-2xl gradient-bg-primary text-white">
               <BookOpen className="w-6 h-6" />
             </div>
-            <span className="text-2xl font-bold gradient-text">EasyJapanese</span>
+            <span className="text-2xl font-bold gradient-text">JapanGoLearn</span>
           </Link>
           <p className="mt-3 text-gray-500 dark:text-gray-400">
             Welcome back! Log in to continue learning.

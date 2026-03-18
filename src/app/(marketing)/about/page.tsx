@@ -4,7 +4,10 @@ import { BookOpen, Users, Heart, Target, Sparkles, Globe } from "lucide-react";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about EasyJapanese's mission to make Japanese language learning accessible, visual, and fun for everyone.",
+    "Learn about JapanGoLearn's mission to make Japanese language learning accessible, visual, and fun for everyone.",
+  alternates: {
+    canonical: "https://japangolearn.com/about",
+  },
 };
 
 const values = [
@@ -54,7 +57,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 jp-pattern opacity-40" />
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            About <span className="gradient-text">EasyJapanese</span>
+            About <span className="gradient-text">JapanGoLearn</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
             We&apos;re on a mission to make Japanese accessible to everyone through
@@ -74,7 +77,7 @@ export default function AboutPage() {
               and cultural nuances, traditional learning methods often feel overwhelming.
             </p>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-              EasyJapanese was born from a simple idea: <strong className="text-primary-600 dark:text-primary-400">what if learning Japanese felt like playing a game?</strong>{" "}
+              JapanGoLearn was born from a simple idea: <strong className="text-primary-600 dark:text-primary-400">what if learning Japanese felt like playing a game?</strong>{" "}
               We combine animated kanji stroke orders, visual mnemonics, AI conversation practice,
               and 3D cultural exploration to create an experience that&apos;s as engaging as it is effective.
             </p>

@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -21,12 +22,14 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl gradient-bg-primary text-white">
-              <BookOpen className="w-5 h-5" />
-            </div>
-            <span className="text-xl font-bold gradient-text hidden sm:inline">
-              EasyJapanese
-            </span>
+            <Image
+              src="/japangolearn_logo.webp"
+              alt="JapanGoLearn Logo"
+              width={140}
+              height={40}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

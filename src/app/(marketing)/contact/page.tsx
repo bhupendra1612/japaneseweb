@@ -4,7 +4,10 @@ import { Mail, MessageCircle, MapPin, Send } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with the EasyJapanese team. We'd love to hear your feedback, questions, or suggestions.",
+    "Get in touch with the JapanGoLearn team. We'd love to hear your feedback, questions, or suggestions.",
+  alternates: {
+    canonical: "https://japangolearn.com/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -37,10 +40,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium">Email</p>
                       <a
-                        href="mailto:support@digitalrise24.com"
+                        href="mailto:support@japangolearn.com"
                         className="text-sm text-primary-600 dark:text-primary-400 hover:underline"
                       >
-                        support@digitalrise24.com
+                        support@japangolearn.com
                       </a>
                     </div>
                   </div>
@@ -62,7 +65,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium">Location</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Digital Rise 24 — Global
+                        JapanGoLearn — Global
                       </p>
                     </div>
                   </div>

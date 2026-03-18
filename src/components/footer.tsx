@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
   Learn: [
@@ -14,7 +14,7 @@ const footerLinks = {
   ],
   Connect: [
     { href: "/contact", label: "Contact Us" },
-    { href: "mailto:support@digitalrise24.com", label: "Email Support" },
+    { href: "mailto:support@japangolearn.com", label: "Email Support" },
   ],
 };
 
@@ -26,12 +26,13 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-9 h-9 rounded-xl gradient-bg-primary text-white">
-                <BookOpen className="w-5 h-5" />
-              </div>
-              <span className="text-lg font-bold gradient-text">
-                EasyJapanese
-              </span>
+              <Image
+                src="/japangolearn_logo.webp"
+                alt="JapanGoLearn Logo"
+                width={140}
+                height={40}
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
               Master Japanese the modern way. Visual learning, gamification, and
@@ -63,8 +64,7 @@ export function Footer() {
 
         <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400 dark:text-gray-500">
-            © {new Date().getFullYear()} EasyJapanese by Digital Rise 24. All
-            rights reserved.
+            © {new Date().getFullYear()} JapanGoLearn. All rights reserved.
           </p>
           <p className="text-xs text-gray-400 dark:text-gray-600 font-jp">
             日本語を楽しく学ぼう！

@@ -168,7 +168,7 @@ export function DashboardTopBar({
               {[
                 { icon: "🔥", text: "Keep your streak alive! Study today.", time: "now" },
                 { icon: "⭐", text: "You earned 25 XP from yesterday's lesson.", time: "1h ago" },
-                { icon: "🎉", text: "Welcome to EasyJapanese!", time: "today" },
+                { icon: "🎉", text: "Welcome to JapanGoLearn!", time: "today" },
               ].map((n, i) => (
                 <div
                   key={i}

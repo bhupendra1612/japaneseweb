@@ -16,130 +16,92 @@ const features = [
   {
     icon: BookOpen,
     title: "Visual-First Learning",
-    description:
-      "Learn kanji and vocabulary through beautiful visual mnemonics and animated breakdowns.",
-    color: "from-primary-500 to-primary-600",
-    glow: "rgba(124, 58, 237, 0.2)",
+    description: "Learn kanji and vocabulary through beautiful visual mnemonics and animated breakdowns.",
+    color: "from-primary-500 to-indigo-600",
   },
   {
     icon: Sparkles,
     title: "SVG Stroke Animations",
-    description:
-      "Watch every kanji come alive with precise stroke-order animations you can practice along with.",
-    color: "from-accent-500 to-accent-600",
-    glow: "rgba(6, 182, 212, 0.2)",
+    description: "Watch every kanji come alive with precise stroke-order animations you can practice along with.",
+    color: "from-accent-400 to-cyan-600",
   },
   {
     icon: Trophy,
     title: "Gamified Progress",
-    description:
-      "Earn XP, maintain streaks, unlock achievements, and climb leaderboards as you learn.",
-    color: "from-gold-500 to-gold-600",
-    glow: "rgba(245, 158, 11, 0.2)",
+    description: "Earn XP, maintain streaks, unlock achievements, and climb leaderboards as you learn.",
+    color: "from-gold-400 to-amber-600",
   },
   {
     icon: Brain,
     title: "AI Conversation",
-    description:
-      "Practice real Japanese conversations with our AI tutor powered by Google Gemini.",
-    color: "from-sakura-500 to-sakura-600",
-    glow: "rgba(236, 72, 153, 0.2)",
+    description: "Practice real Japanese conversations with our AI tutor powered by Google Gemini.",
+    color: "from-sakura-400 to-pink-600",
   },
   {
     icon: Globe,
     title: "3D Cultural Immersion",
-    description:
-      "Explore Japanese culture through interactive 3D scenes — temples, cities, and more.",
-    color: "from-primary-600 to-accent-500",
-    glow: "rgba(79, 70, 229, 0.2)",
+    description: "Explore Japanese culture through interactive 3D scenes — temples, cities, and more.",
+    color: "from-violet-500 to-fuchsia-600",
   },
   {
     icon: Target,
     title: "JLPT Structured Path",
-    description:
-      "Follow a clear progression from N5 (beginner) to N1 (advanced) aligned with official JLPT exams.",
-    color: "from-accent-600 to-primary-500",
-    glow: "rgba(6, 182, 212, 0.2)",
+    description: "Follow a clear progression from N5 (beginner) to N1 (advanced) aligned with official JLPT exams.",
+    color: "from-teal-400 to-emerald-600",
   },
 ];
 
 const jlptLevels = [
-  {
-    level: "N5",
-    label: "Beginner",
-    kanji: "入",
-    color: "from-green-400 to-emerald-500",
-    desc: "Hiragana, Katakana, 100 Kanji",
-  },
-  {
-    level: "N4",
-    label: "Elementary",
-    kanji: "学",
-    color: "from-accent-400 to-accent-600",
-    desc: "300 Kanji, Basic Grammar",
-  },
-  {
-    level: "N3",
-    label: "Intermediate",
-    kanji: "語",
-    color: "from-primary-400 to-primary-600",
-    desc: "650 Kanji, Conversational",
-  },
-  {
-    level: "N2",
-    label: "Upper-Intermediate",
-    kanji: "読",
-    color: "from-sakura-400 to-sakura-600",
-    desc: "1000 Kanji, News & Articles",
-  },
-  {
-    level: "N1",
-    label: "Advanced",
-    kanji: "極",
-    color: "from-gold-400 to-gold-600",
-    desc: "2000+ Kanji, Native Level",
-  },
+  { level: "N5", label: "Beginner", kanji: "入", color: "from-emerald-400 to-teal-600", desc: "Hiragana, Katakana, 100 Kanji" },
+  { level: "N4", label: "Elementary", kanji: "学", color: "from-blue-400 to-indigo-600", desc: "300 Kanji, Basic Grammar" },
+  { level: "N3", label: "Intermediate", kanji: "語", color: "from-violet-400 to-purple-600", desc: "650 Kanji, Conversational" },
+  { level: "N2", label: "Upper-Intermediate", kanji: "読", color: "from-pink-400 to-rose-600", desc: "1000 Kanji, News & Articles" },
+  { level: "N1", label: "Advanced", kanji: "極", color: "from-amber-400 to-orange-600", desc: "2000+ Kanji, Native Level" },
 ];
 
 export default function HomePage() {
   return (
-    <>
-      {/* ===== HERO SECTION ===== */}
-      <section className="relative overflow-hidden gradient-bg-hero">
-        {/* Decorative background */}
-        <div className="absolute inset-0 jp-pattern opacity-50" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl" />
+    <div className="bg-[#0b0f19] min-h-screen text-white overflow-hidden selection:bg-primary-500/30">
+      {/* ===== GLOBAL BACKGROUND ORBS ===== */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-600/20 rounded-full blur-[120px]" />
+        <div className="absolute top-[20%] right-[-5%] w-[40%] h-[40%] bg-accent-500/20 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[60%] h-[60%] bg-violet-600/20 rounded-full blur-[150px]" />
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)]" />
+      </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      {/* ===== HERO SECTION ===== */}
+      <section className="relative z-10 py-24 lg:py-36">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-8 animate-scale-in">
-              <Star className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-gray-300 px-5 py-2 rounded-full text-sm font-medium mb-10 animate-scale-in backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+              <Star className="w-4 h-4 text-accent-400" />
               <span>Free to start • No credit card needed</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6 animate-slide-up">
+            <h1 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight mb-8 animate-slide-up leading-[1.1]">
               Learn Japanese
               <br />
-              <span className="gradient-text">the Modern Way</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-accent-300 to-primary-400 animate-shimmer">
+                the Modern Way
+              </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
               Visual learning, animated kanji strokes, gamification, and
               AI-powered practice. Master JLPT levels from{" "}
-              <span className="font-semibold text-primary-600 dark:text-primary-400">
-                N5 to N1
-              </span>{" "}
+              <span className="font-semibold text-white">N5 to N1</span>{" "}
               with confidence.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <Link
                 href="/signup"
-                className="inline-flex items-center gap-2 gradient-bg-primary text-white font-semibold px-8 py-4 rounded-2xl text-lg hover:opacity-90 transition-all duration-300 neon-glow animate-pulse-neon"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-bold px-10 py-4 rounded-2xl text-lg hover:scale-105 transition-all duration-300 neon-glow w-full sm:w-auto shadow-[0_0_40px_rgba(124,58,237,0.4)]"
               >
                 <Zap className="w-5 h-5" />
                 Start Learning Free
@@ -147,24 +109,24 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 font-medium px-8 py-4 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 text-gray-300 font-medium px-10 py-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-all duration-300 w-full sm:w-auto hover:text-white"
               >
                 Learn More
               </Link>
             </div>
 
             {/* Stats */}
-            <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            <div className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl animate-slide-up shadow-2xl" style={{ animationDelay: "0.3s" }}>
               {[
                 { value: "2,136", label: "Jōyō Kanji" },
                 { value: "5", label: "JLPT Levels" },
                 { value: "100%", label: "Free to Start" },
               ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <p className="text-2xl sm:text-3xl font-bold gradient-text">
+                <div key={stat.label} className="text-center relative">
+                  <p className="text-3xl sm:text-4xl font-black bg-clip-text text-transparent bg-gradient-to-br from-white to-gray-500 drop-shadow-lg">
                     {stat.value}
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  <p className="text-sm text-gray-400 mt-2 font-medium">
                     {stat.label}
                   </p>
                 </div>
@@ -174,37 +136,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== JLPT PATH SECTION ===== */}
-      <section className="py-20 lg:py-28 relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ===== JLPT PATH SECTION (GLASSMORPHISM) ===== */}
+      <section className="py-24 relative z-10 w-full overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 max-w-full">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Your Path from{" "}
-              <span className="gradient-text">N5 to N1</span>
+            <h2 className="text-3xl sm:text-5xl font-bold mb-5 tracking-tight">
+              Your Path from <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-400 to-primary-400">N5 to N1</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Follow the structured JLPT progression. Each level builds on the previous, preparing you for the official exam.
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-6 stagger-children">
+          <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 lg:gap-6 w-full max-w-full stagger-children">
             {jlptLevels.map((level, index) => (
-              <div key={level.level} className="relative group">
+              <div key={level.level} className="relative group w-full md:w-48 lg:w-56 flex shrink-0">
                 {/* Connector line */}
                 {index < jlptLevels.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-5 lg:-right-6 w-4 lg:w-6 h-0.5 bg-gradient-to-r from-gray-300 to-gray-200 dark:from-gray-700 dark:to-gray-800" />
+                  <div className="hidden md:block absolute top-1/2 -right-5 lg:-right-6 w-4 lg:w-6 h-px bg-white/10" />
                 )}
-                <div className="w-48 p-6 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl text-center neon-glow">
-                  <div
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${level.color} text-white text-3xl font-jp font-bold mb-4`}
-                  >
+                <div className="w-full p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group-hover:-translate-y-2 shadow-xl flex flex-col items-center text-center">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${level.color} text-white shadow-[0_0_30px_rgba(255,255,255,0.2)] text-3xl font-jp font-bold mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all`}>
                     {level.kanji}
                   </div>
-                  <h3 className="text-xl font-bold mb-1">{level.level}</h3>
-                  <p className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-2">
+                  <h3 className="text-2xl font-bold mb-1 text-white">{level.level}</h3>
+                  <p className="text-sm text-gray-300 font-medium mb-3">
                     {level.label}
                   </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                  <p className="text-xs text-gray-400 mt-auto">
                     {level.desc}
                   </p>
                 </div>
@@ -215,21 +174,18 @@ export default function HomePage() {
       </section>
 
       {/* ===== FEATURES SECTION ===== */}
-      <section className="py-20 lg:py-28 bg-gray-50 dark:bg-gray-900/50 relative">
-        <div className="absolute inset-0 jp-pattern opacity-30" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-accent-50 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+      <section className="py-24 relative z-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-primary-900/40 border border-primary-500/20 text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
               <Languages className="w-4 h-4" />
               <span>Why JapanGoLearn?</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Everything you need to{" "}
-              <span className="gradient-text">master Japanese</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+              Everything you need to <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-accent-400">master Japanese</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-              A modern platform that combines the best learning science with
-              beautiful design and gamification.
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              A modern platform that combines the best learning science with beautiful design and effortless gamification.
             </p>
           </div>
 
@@ -237,18 +193,16 @@ export default function HomePage() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="group p-6 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  boxShadow: `0 0 0 rgba(0,0,0,0)`,
-                }}
+                className="group relative p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] overflow-hidden"
               >
-                <div
-                  className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}
-                >
+                {/* Inner ambient glow on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                
+                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} text-white shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                   <feature.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <h3 className="text-xl font-bold mb-3 text-white relative z-10">{feature.title}</h3>
+                <p className="text-gray-400 leading-relaxed relative z-10 font-medium">
                   {feature.description}
                 </p>
               </div>
@@ -258,33 +212,39 @@ export default function HomePage() {
       </section>
 
       {/* ===== CTA SECTION ===== */}
-      <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 gradient-bg-hero" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl" />
+      <section className="py-24 relative z-10">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="relative p-12 sm:p-20 rounded-[3rem] bg-gradient-to-br from-primary-900/60 to-accent-900/40 border border-white/10 backdrop-blur-2xl text-center overflow-hidden shadow-2xl">
+            {/* Background elements for CTA */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-500/30 rounded-full blur-[80px]" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-500/30 rounded-full blur-[80px]" />
+            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay" />
 
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to start your
-            <br />
-            <span className="gradient-text">Japanese journey?</span>
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-            Join thousands of learners mastering Japanese with visual learning
-            and gamification. It&apos;s free to get started.
-          </p>
-          <Link
-            href="/signup"
-            className="inline-flex items-center gap-2 gradient-bg-primary text-white font-semibold px-10 py-4 rounded-2xl text-lg hover:opacity-90 transition-all duration-300 neon-glow"
-          >
-            <Zap className="w-5 h-5" />
-            Get Started — It&apos;s Free
-            <ChevronRight className="w-5 h-5" />
-          </Link>
-          <p className="mt-4 text-sm text-gray-500 dark:text-gray-500 font-jp">
-            日本語の冒険を始めよう 🇯🇵
-          </p>
+            <div className="relative z-10">
+              <p className="text-6xl mb-6">⛩️</p>
+              <h2 className="text-4xl sm:text-6xl font-black mb-6 tracking-tight text-white drop-shadow-md">
+                Ready to start your
+                <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-300 to-primary-300">Japanese journey?</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium">
+                Join thousands of learners mastering Japanese with visual learning
+                and gamification. It's totally free to get started.
+              </p>
+              <Link
+                href="/signup"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0b0f19] font-black px-12 py-5 rounded-2xl text-xl hover:scale-105 transition-all duration-300 shadow-[0_0_50px_rgba(255,255,255,0.2)]"
+              >
+                <Zap className="w-6 h-6 text-primary-600" />
+                Get Started — It's Free
+              </Link>
+              <p className="mt-8 text-sm text-gray-400 font-jp font-medium uppercase tracking-widest">
+                日本語の冒険を始めよう
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -62,6 +62,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    // Hiragana & Katakana — high SEO value
+    {
+      url: `${baseUrl}/hiragana`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/katakana`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+    // Vocabulary — high SEO value
+    {
+      url: `${baseUrl}/vocabulary`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    ...["n5", "n4", "n3", "n2", "n1"].map((level) => ({
+      url: `${baseUrl}/vocabulary/level/${level}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    })),
   ];
 
   return staticRoutes;

@@ -41,11 +41,11 @@
   --color-gold-500: #f59e0b;
   --color-gold-600: #d97706;
 
-  /* Surfaces */
-  --color-surface-light: #fafbff;
-  --color-surface-card-light: #ffffff;
-  --color-surface-dark: #0f172a;
-  --color-surface-card-dark: #1e293b;
+  /* Surfaces - Fixed Neon/Glass Theme */
+  --color-surface-light: #0b0f19;
+  --color-surface-card-light: #12182b;
+  --color-surface-dark: #0b0f19;
+  --color-surface-card-dark: #12182b;
 
   /* Font families */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -371,3 +371,146 @@ body {
   }
 }
 
+/* ============================================
+   Vocabulary Page — Warm Parchment Reading Theme
+   Eye-comfort colors for long study sessions
+   Inspired by Kindle Sepia + Japanese washi paper
+   ============================================ */
+
+/* Token definitions */
+.vocab-page {
+  --vp-bg:          #F7F4EE;   /* Warm cream — main background */
+  --vp-bg-card:     #FFFFFF;   /* Pure white card surfaces */
+  --vp-bg-alt:      #EEE9DE;   /* Slightly deeper cream for sections */
+  --vp-bg-hover:    #F0EBE3;   /* Hover surface */
+  --vp-bg-input:    #FDFAF5;   /* Input field background */
+  --vp-text:        #1C1510;   /* Deep warm ink — primary text */
+  --vp-text-sub:    #6B5F52;   /* Medium warm brown — secondary text */
+  --vp-text-muted:  #A09080;   /* Muted text */
+  --vp-border:      #DDD8CF;   /* Warm tan border */
+  --vp-border-soft: #EAE5DC;   /* Softer border */
+  --vp-shadow:      rgba(92, 72, 52, 0.08);  /* Warm brown shadow */
+  --vp-shadow-md:   rgba(92, 72, 52, 0.14);
+
+  background-color: var(--vp-bg);
+  color: var(--vp-text);
+  min-height: 100vh;
+}
+
+/* Page & section backgrounds */
+.vocab-page .vp-section-alt {
+  background-color: var(--vp-bg-alt);
+}
+
+.vocab-page .vp-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.06) 0%,
+    rgba(240, 235, 220, 0.8) 50%,
+    rgba(236, 72, 153, 0.04) 100%
+  );
+  border-bottom: 1px solid var(--vp-border);
+}
+
+/* ── Cards ─────────────────────────────────── */
+.vocab-page .vp-card {
+  background-color: var(--vp-bg-card);
+  border-color: var(--vp-border);
+  box-shadow: 0 1px 4px var(--vp-shadow), 0 0 0 1px var(--vp-border-soft);
+  transition: box-shadow 0.2s, transform 0.15s;
+  color: var(--vp-text);
+}
+
+.vocab-page .vp-card:hover {
+  box-shadow: 0 6px 20px var(--vp-shadow-md), 0 0 0 1px var(--vp-border);
+  transform: translateY(-2px);
+}
+
+/* ── Text helpers ───────────────────────────── */
+.vocab-page .vp-text { color: var(--vp-text); }
+.vocab-page .vp-text-sub { color: var(--vp-text-sub); }
+.vocab-page .vp-text-muted { color: var(--vp-text-muted); }
+
+/* ── Inputs ─────────────────────────────────── */
+.vocab-page .vp-input {
+  background-color: var(--vp-bg-input);
+  border: 1.5px solid var(--vp-border);
+  color: var(--vp-text);
+  border-radius: 0.75rem;
+}
+
+.vocab-page .vp-input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+  background-color: #FFFFFF;
+}
+
+.vocab-page .vp-input::placeholder {
+  color: var(--vp-text-muted);
+}
+
+/* ── Pills / Tabs ───────────────────────────── */
+.vocab-page .vp-pill {
+  background-color: var(--vp-bg-card);
+  border: 1.5px solid var(--vp-border);
+  color: var(--vp-text-sub);
+  border-radius: 9999px;
+  transition: all 0.15s;
+}
+
+.vocab-page .vp-pill:hover {
+  border-color: #7c3aed;
+  color: #7c3aed;
+  background-color: #f5f3ff;
+}
+
+.vocab-page .vp-pill.active {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* ── Dropdown ───────────────────────────────── */
+.vocab-page .vp-dropdown {
+  background-color: var(--vp-bg-card);
+  border: 1.5px solid var(--vp-border);
+  box-shadow: 0 8px 24px var(--vp-shadow-md);
+}
+
+.vocab-page .vp-dropdown-item:hover {
+  background-color: var(--vp-bg-hover);
+}
+
+/* ── Dividers ───────────────────────────────── */
+.vocab-page .vp-divider {
+  border-color: var(--vp-border-soft);
+}
+
+/* ── Sticky level nav ───────────────────────── */
+.vocab-page .vp-sticky-nav {
+  background-color: var(--vp-bg);
+  border-bottom: 1px solid var(--vp-border);
+}
+
+/* ── Result count text ──────────────────────── */
+.vocab-page .vp-count {
+  color: var(--vp-text-muted);
+  font-size: 0.75rem;
+}
+
+/* Scrollbar styling for the vocab page */
+.vocab-page ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.vocab-page ::-webkit-scrollbar-track {
+  background: var(--vp-bg-alt);
+}
+.vocab-page ::-webkit-scrollbar-thumb {
+  background: var(--vp-border);
+  border-radius: 99px;
+}
+.vocab-page ::-webkit-scrollbar-thumb:hover {
+  background: #A09080;
+}

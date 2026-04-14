@@ -252,7 +252,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap"
@@ -272,7 +272,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(courseListSchema) }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-surface-dark text-gray-900 dark:text-gray-100`} suppressHydrationWarning>
+      {/* 
+        Unified Fixed Dark Theme:
+        - "bg-[#0b0f19]" gives a dense, premium dark navy base (UK Learning style)
+        - Text is explicitly white / light gray.
+      */}
+      <body className={`${inter.variable} font-sans antialiased bg-[#0b0f19] text-white`} suppressHydrationWarning>
         <Suspense>
           <Providers>
             {children}

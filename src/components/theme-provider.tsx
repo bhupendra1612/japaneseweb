@@ -1,10 +1,11 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext } from "react";
 
-type Theme = "light" | "dark";
+// Forcing dark theme permanently
+type Theme = "dark";
 const ThemeCtx = createContext<{ theme: Theme; setTheme: (t: Theme) => void }>({
-  theme: "light",
+  theme: "dark",
   setTheme: () => {},
 });
 
@@ -13,41 +14,11 @@ export function useTheme() {
 }
 
 /**
- * Lightweight ThemeProvider — replaces next-themes.
- * Reads from localStorage, applies class to <html>, works with React 19.
+ * Stripped down ThemeProvider since the app now uses a fixed Dark Neon UI.
  */
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
-
-  // On mount: read saved preference or system preference
-  useEffect(() => {
-    const saved = localStorage.getItem("theme") as Theme | null;
-    if (saved === "dark" || saved === "light") {
-      applyTheme(saved);
-      setThemeState(saved);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      applyTheme("dark");
-      setThemeState("dark");
-    }
-  }, []);
-
-  function applyTheme(t: Theme) {
-    const root = document.documentElement;
-    if (t === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-    localStorage.setItem("theme", t);
-  }
-
-  function setTheme(t: Theme) {
-    applyTheme(t);
-    setThemeState(t);
-  }
-
   return (
-    <ThemeCtx.Provider value={{ theme, setTheme }}>
+    <ThemeCtx.Provider value={{ theme: "dark", setTheme: () => {} }}>
       {children}
     </ThemeCtx.Provider>
   );
